@@ -1,0 +1,33 @@
+{
+  "name": "productos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "descrpcion": {
+      "type": "string",
+      "required": false,
+      "default": ""
+    },
+    "precio": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "inventario": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

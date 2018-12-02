@@ -1,0 +1,39 @@
+{
+  "name": "pedidos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "productos": {
+      "type": "array",
+      "required": true
+    },
+    "ubicacion": {
+      "type": "string",
+      "required": true
+    },
+    "detalles": {
+      "type": "string"
+    },
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "estado": {
+      "type": "string",
+      "required": true,
+      "default": "En espera"
+    },
+    "aceptada": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
