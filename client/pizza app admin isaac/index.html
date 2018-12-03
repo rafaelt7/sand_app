@@ -64,7 +64,7 @@
 							</span>
 						</a>
 					</li><li id="imMnMnNode4" class=" imPage">
-						<a href="configuracion.php">
+						<a href="configuracion.html">
 							<span class="imMnMnFirstBg">
 								<span class="imMnMnTxt"><span class="imMnMnImg"></span><span class="imMnMnTextLabel">Configuración</span></span>
 							</span>
@@ -79,17 +79,12 @@
 				<div id="imPageRow_1" class="imPageRow">
 				
 				<div id="imPageRowContent_1" class="imContentDataContainer">
-				<div id="imCell_1" class="" > <div id="imCellStyleGraphics_1"></div><div id="imCellStyle_1"  data-responsive-sequence-number="1"><div id="imHTMLObject_01" class="imHTMLObject" style="height: 350px; overflow: auto; text-align: center;"><form action="/action_page.php">
-				<p>El admin escribira el numero de productos vendidos en cada compra y al final se mostrara el inventario actualizado</p>
-				  Sandwich de pizza:<br>
-				  <input type="text" name="pizza" value=""><br>
-				  Hawaiian Punch:<br>
-				  <input type="text" name="punch" value=""><br>
-				  Soda de Naranja:<br>
-				  <input type="text" name="naranja" value=""><br><br>
+				<div id="imCell_1" class="" > <div id="imCellStyleGraphics_1"></div><div id="imCellStyle_1"  data-responsive-sequence-number="1"><div id="imHTMLObject_01" class="imHTMLObject" style="height: 350px; overflow: auto; text-align: center;">
+				<form id="form-inventario" action="/action_page.php">
+				  <p>El admin escribira el numero de productos vendidos en cada compra y al final se mostrara el inventario actualizado</p>
+				  <div id="productos">
 				  
-				  <input type="submit" value="Submit">
-				  <input type="reset">
+					</div> 
 				</form>
 				
 				<!DOCTYPE html>
@@ -108,31 +103,13 @@
 				</head>
 				<body>
 				
-				<table style="width:100%">
-				  <caption>Inventario de productos</caption>
-				  <tr>
-				    <th>Producto</th>
-				    <th>Cantidad en Stock</th>
-				  </tr>
-				  <tr>
-				    <td>Sandwich de Pizza</td>
-				    <td>100</td>
-				  </tr>
-				   <tr>
-				    <td>Soda de Naranja</td>
-				    <td>10</td>
-				  </tr>
-				  <tr>
-				    <td>Hawaiian Punch</td>
-				    <td>10</td>
-				  </tr>
-				</table>
+			
 				
 				</body>
 				</html></div></div></div></div>
 				</div>
 				
-				<div id="imFooPad"></div><div id="imBtMnContainer" class="imContentDataContainer"><div id="imBtMn"><a href="index.html">Inventario</a> | <a href="pedidos.html">Pedidos</a> | <a href="configuracion.php">Configuración</a> | <a href="imsitemap.html">Mapa general del sitio</a></div></div>
+				<div id="imFooPad"></div><div id="imBtMnContainer" class="imContentDataContainer"><div id="imBtMn"><a href="index.html">Inventario</a> | <a href="pedidos.html">Pedidos</a> | <a href="configuracion.html">Configuración</a> | <a href="imsitemap.html">Mapa general del sitio</a></div></div>
 					<div class="imClear"></div>
 				</div>
 			</div>
@@ -176,4 +153,8 @@
 		
 		<noscript class="imNoScript"><div class="alert alert-red">Para utilizar este sitio tienes que habilitar JavaScript.</div></noscript>
 	</body>
+
+	<script type="text/javascript" src="../libs/underscore-min.js"></script>
+	<script type="text/javascript" src="../libs/backbone-min.js"></script>
+	<script type="text/javascript" src="backend_inventario.js"></script>
 </html>

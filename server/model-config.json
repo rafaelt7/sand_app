@@ -42,5 +42,9 @@
   "pedidos": {
     "dataSource": "mongoDS",
     "public": true
+  },
+  "estado": {
+    "dataSource": "mongoDS",
+    "public": true
   }
 }
