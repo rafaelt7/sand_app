@@ -98,14 +98,17 @@ var pedidoView = Backbone.View.extend({
 			});
 			pedido.set({productos:productosArray})
 			if(masDe1){
-				console.log('sync');
-				// pedido.save().done(function(){
-				// 	console.log('save')
-				// 	console.log(pedido.get("id"));
-				// });
-				window.location.hash = '5bfde2b9be776d2d0c33cf4c';
-				window.location.pathname = '/estado-de-pedido.html';
+				pedido.save().done(function(){
+					window.location.hash = (pedido.get("id"));
+					window.location.pathname = '/estado-de-pedido.html';
+				});
 			}
+			else{
+				alert("El pedido no puede estar vacio");
+			}
+		}
+		else{
+			alert("Es necesario que ingrese su nombre y ubicacion")
 		}
 		return false;
 	}
@@ -113,9 +116,3 @@ var pedidoView = Backbone.View.extend({
 
 
 var forma = new pedidoView({el:$("form#pedidos")});
-// function imprimeValores(){
-// 	_.each(PedidoViews,function(view){
-// 		console.log(view.getValue())
-// 		console.log(view.getId())
-// 	});
-// }
